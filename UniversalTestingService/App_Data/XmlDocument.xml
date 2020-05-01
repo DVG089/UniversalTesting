@@ -1,0 +1,1314 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UniversalTestingService</name>
+    </assembly>
+    <members>
+        <member name="T:UniversalTestingService.Additional.BadRequestException">
+            <summary>
+            Исключение плохого запроса
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Additional.EnumConformityAttribute">
+            <summary>
+            Атрибут проверки перечисления
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Additional.EnumConformityAttribute.#ctor">
+            <summary>
+            Конструктор объекта атрибута проверки перечисления
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Additional.EnumConformityAttribute.IsValid(System.Object)">
+            <summary>
+            Проверка объекта на принадлежность к перечислению
+            </summary>
+            <param name="value">Объект проверки</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="T:UniversalTestingService.Additional.EnumConformityOrNullAttribute">
+            <summary>
+            Атрибут проверки перечисления или отсутствия значения
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Additional.EnumConformityOrNullAttribute.#ctor">
+            <summary>
+            Конструктор объекта атрибута проверки перечисления или отсутствия значения
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Additional.EnumConformityOrNullAttribute.IsValid(System.Object)">
+            <summary>
+            Проверка объекта на принадлежность к перечислению или отсутствии значения
+            </summary>
+            <param name="value">Объект проверки</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="T:UniversalTestingService.Additional.RangeOrNullAttribute">
+            <summary>
+            Задает ограничения числового диапазона для значения поля данных, разрешая null
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Additional.RangeOrNullAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструктор объектаRangeOrNullAttribute
+            </summary>
+            <param name="minimum">Минимальное значение</param>
+            <param name="maximum">Максимальное значение</param>
+        </member>
+        <member name="M:UniversalTestingService.Additional.RangeOrNullAttribute.IsValid(System.Object)">
+            <summary>
+            Проверка объекта на принадлежность к числовому диапазону или отсутствии значения
+            </summary>
+            <param name="value">Объект проверки</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:UniversalTestingService.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:UniversalTestingService.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,UniversalTestingService.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,UniversalTestingService.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:UniversalTestingService.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},UniversalTestingService.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.#ctor(UniversalTestingService.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,UniversalTestingService.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:UniversalTestingService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:UniversalTestingService.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:UniversalTestingService.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:UniversalTestingService.Controllers.QuestionsController">
+            <summary>
+            Контроллер вопросов
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Controllers.QuestionsController.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Controllers.QuestionsController.Service">
+            <summary>
+            Объект сервиса вопроса
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.#ctor">
+            <summary>
+            Конструирует объект контроллера вопросов
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.GetAllQuestions">
+            <summary>
+            Возвращение списка всех вопросов
+            </summary>
+            <returns>Список вопросов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.GetQuestion(System.Int32)">
+            <summary>
+            Возвращение вопроса
+            </summary>
+            <param name="id">Номер вопроса</param>
+            <returns>Вопрос</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.GetQuestionsByFilter(UniversalTestingService.Models.FilterQuestions)">
+            <summary>
+            Возвращение списка вопросов по фильтру
+            </summary>
+            <param name="filter">Объект фильтра</param>
+            <returns>Список вопросов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.CreateQuestion(UniversalTestingService.Models.Question)">
+            <summary>
+            Создание вопроса
+            </summary>
+            <param name="question">Объект вопроса</param>
+            <returns>Номер созданого вопроса</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.EditQuestion(System.Int32,UniversalTestingService.Models.Question)">
+            <summary>
+            Редактирование вопроса при отсутствии ссылок на него
+            </summary>
+            <param name="id">Номер вопроса</param>
+            <param name="question">Объект вопроса</param>
+            <returns>Результат редактирования</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.QuestionsController.EditQuestion(System.Int32,System.Boolean)">
+            <summary>
+            Редактирование активности вопроса
+            </summary>
+            <param name="id">Номер вопроса</param>
+            <param name="acting">Активность вопроса</param>
+            <returns>Объект IHttpActionResult</returns>
+        </member>
+        <member name="T:UniversalTestingService.Controllers.TestsController">
+            <summary>
+            Контроллер тестов
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Controllers.TestsController.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Controllers.TestsController.Service">
+            <summary>
+            Объект сервиса теста
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.#ctor">
+            <summary>
+            Конструирует объект контроллера тестов
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.GetAllQuestions">
+            <summary>
+            Возвращение списка всех тестов
+            </summary>
+            <returns>Список тестов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.GetTest(System.Int32)">
+            <summary>
+            Возвращение теста
+            </summary>
+            <param name="id">Номер теста</param>
+            <returns>Тест</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.GetAnswersTest(System.Int32)">
+            <summary>
+            Возвращение списка вопросов-ответов
+            </summary>
+            <param name="id">Номер теста</param>
+            <returns>Список вопросов-ответов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.GetResultTest(System.Int32)">
+            <summary>
+            Возвращение результата теста вызывающего пользователя
+            </summary>
+            <param name="id">Номер теста</param>
+            <returns>Результат теста</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.CreateTest(UniversalTestingService.Models.SubjectEnum,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Создание теста
+            </summary>
+            <param name="subject">Предмет</param>
+            <param name="easyCount">Количество легких вопросов</param>
+            <param name="mediumCount">Количество вопросов средней сложности</param>
+            <param name="hardCount">Количество сложных вопросов</param>
+            <returns>Номер созданого теста</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.TestsController.CalculationResultTest(System.Int32,System.Collections.Generic.List{UniversalTestingService.Models.Answer})">
+            <summary>
+            Расчет результата для не рассчитанного теста вызывающего пользователя
+            </summary>
+            <param name="id">Номер теста</param>
+            <param name="answers">Список ответов пользователя</param>
+            <returns>Объект IHttpActionResult</returns>
+        </member>
+        <member name="T:UniversalTestingService.Controllers.UsersController">
+            <summary>
+            Контроллер пользователей
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Controllers.UsersController.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Controllers.UsersController.Service">
+            <summary>
+            Объект сервиса пользователя
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.#ctor">
+            <summary>
+            Конструирует объект контроллера пользователей
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.GetAllUsers">
+            <summary>
+            Возвращение списка всех пользователей
+            </summary>
+            <returns>Список пользователей</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.GetUser(System.String)">
+            <summary>
+            Возвращение пользователя
+            </summary>
+            <param name="login">Логин</param>
+            <returns>Пользователь</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.GetRoleUser">
+            <summary>
+            Возвращение роли авторизованого пользователя
+            </summary>
+            <returns>Роль пользователя</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.CreateUser(UniversalTestingService.Models.UserAuthentication)">
+            <summary>
+            Создание пользователя
+            </summary>
+            <param name="user">Объект аутенфикации пользователя</param>
+            <returns>Объект IHttpActionResult</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.EditUser(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Редактирование пользователя
+            </summary>
+            <param name="login">Логин</param>
+            <param name="adminEnabled">Включение роли администратора</param>
+            <param name="actingEnabled">Включение активности</param>
+            <returns>Объект IHttpActionResult</returns>
+        </member>
+        <member name="M:UniversalTestingService.Controllers.UsersController.Dispose(System.Boolean)">
+            <summary>
+            Освобождение неуправляемых ресурсов
+            </summary>
+            <param name="disposing">Параметр включения</param>
+        </member>
+        <member name="T:UniversalTestingService.Filters.AuthenticationUserAttribute">
+            <summary>
+            Фильтр аутенфикации пользователей
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Filters.AuthenticationUserAttribute.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Filters.AuthenticationUserAttribute.#ctor">
+            <summary>
+            Конструктор объекта фильтра аутенфикации пользователей
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Filters.AuthenticationUserAttribute.AuthenticateAsync(System.Web.Http.Filters.HttpAuthenticationContext,System.Threading.CancellationToken)">
+            <summary>
+            Метод аутенфикации
+            </summary>
+            <param name="context">Объект HttpAuthenticationContext</param>
+            <param name="cancellationToken">Объект отменяющего токена</param>
+            <returns>Результат задачи</returns>
+        </member>
+        <member name="M:UniversalTestingService.Filters.AuthenticationUserAttribute.ConvertAuthenticationHeader(System.Net.Http.Headers.AuthenticationHeaderValue)">
+            <summary>
+            Конвертирование объекта AuthenticationHeaderValue в строковой массив
+            </summary>
+            <param name="authentication">Объект конвертирования AuthenticationHeaderValue</param>
+            <returns>Строковой массив</returns>
+        </member>
+        <member name="M:UniversalTestingService.Filters.AuthenticationUserAttribute.CheckLoginPassword(System.String[])">
+            <summary>
+            Проверка строкового массива на соответствие
+            </summary>
+            <param name="loginPassword">Строковой массив</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="T:UniversalTestingService.Filters.AuthorizationUserAttribute">
+            <summary>
+            Фильтр авторизации пользователей
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Filters.AuthorizationUserAttribute.Role">
+            <summary>
+            Проверяемая роль пользователя
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Filters.AuthorizationUserAttribute.#ctor(System.String)">
+            <summary>
+            Конструктор объекта авторизации пользователей
+            </summary>
+            <param name="role">Проверяемая роль пользователя</param>
+        </member>
+        <member name="M:UniversalTestingService.Filters.AuthorizationUserAttribute.ExecuteAuthorizationFilterAsync(System.Web.Http.Controllers.HttpActionContext,System.Threading.CancellationToken,System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}})">
+            <summary>
+            Метод авторизации
+            </summary>
+            <param name="actionContext">Объект HttpActionContext</param>
+            <param name="cancellationToken">Объект отменяющего токена</param>
+            <param name="continuation">Выполняемый метод</param>
+            <returns>Результат задачи</returns>
+        </member>
+        <member name="T:UniversalTestingService.Filters.HandlingExceptionAttribute">
+            <summary>
+            Фильтр обработки исключения BadRequestException
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Filters.HandlingExceptionAttribute.Log">
+            <summary>
+            Журнал сообщений Nlog
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Filters.HandlingExceptionAttribute.ExecuteExceptionFilterAsync(System.Web.Http.Filters.HttpActionExecutedContext,System.Threading.CancellationToken)">
+            <summary>
+            Метод обработки исключения
+            </summary>
+            <param name="actionExecutedContext">Объект HttpActionExecutedContext</param>
+            <param name="cancellationToken">Отменяющий токен</param>
+            <returns>Результат задачи</returns>
+        </member>
+        <member name="T:UniversalTestingService.Models.Answer">
+            <summary>
+            Класс ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Answer.Id">
+            <summary>
+            Номер ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Answer.AnswerBody">
+            <summary>
+            Содержание ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Answer.QuestionId">
+            <summary>
+            Номер вопроса
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Answer.Question">
+            <summary>
+            Вопрос
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Answer.TestId">
+            <summary>
+            Номер теста
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.FilterQuestions">
+            <summary>
+            Класс фильтра вопросов
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.FilterQuestions.LevelDifficulty">
+            <summary>
+            Уровень сложности
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.FilterQuestions.Subject">
+            <summary>
+            Предмет
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.FilterQuestions.Acting">
+            <summary>
+            Активность вопроса
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.Question">
+            <summary>
+            Класс вопроса
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.Id">
+            <summary>
+            Номер вопроса
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.Text">
+            <summary>
+            Текст вопроса
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.OptionResponse1">
+            <summary>
+            Первый вариант ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.OptionResponse2">
+            <summary>
+            Второй вариант ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.OptionResponse3">
+            <summary>
+            Третий вариант ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.OptionResponse4">
+            <summary>
+            Четвертый вариант ответа
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.Response">
+            <summary>
+            Правильный ответ
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.LevelDifficulty">
+            <summary>
+            Уровень сложности
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.Subject">
+            <summary>
+            Предмет
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Question.Acting">
+            <summary>
+            Активность вопроса
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.LevelDifficultyEnum">
+            <summary>
+            Перечисление уровней сложности
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.LevelDifficultyEnum.Easy">
+            <summary>
+            Легкий уровень
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.LevelDifficultyEnum.Medium">
+            <summary>
+            Средний уровень
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.LevelDifficultyEnum.Hard">
+            <summary>
+            Сложный уровень
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.SubjectEnum">
+            <summary>
+            Перечисление предметов
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.SubjectEnum.Physics">
+            <summary>
+            Физика
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.SubjectEnum.Mathematics">
+            <summary>
+            Математика
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.SubjectEnum.Informatics">
+            <summary>
+            Информатика
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Models.SubjectEnum.RussianLanguage">
+            <summary>
+            Русский язык
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.Test">
+            <summary>
+            Класс теста
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.Id">
+            <summary>
+            Номер теста
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.UserLogin">
+            <summary>
+            Логин пользователя
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.Subject">
+            <summary>
+            Предмет
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.EasyCount">
+            <summary>
+            Количество легких вопросов
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.MediumCount">
+            <summary>
+            Количество вопросов средней сложности
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.HardCount">
+            <summary>
+            Количество сложных вопросов
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.MaxResult">
+            <summary>
+            Максимальное число балов за тест
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.Result">
+            <summary>
+            Результат
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.Test.Answers">
+            <summary>
+            Список вопросов-ответов
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.TestResult">
+            <summary>
+            Класс результата теста
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.TestResult.Result">
+            <summary>
+            Результат теста
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.TestResult.MaxResult">
+            <summary>
+            Максимальный результат теста
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.UniversalTestingContext">
+            <summary>
+            Контекст базы данных
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Models.UniversalTestingContext.#ctor">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.UniversalTestingContext.Users">
+            <summary>
+            Таблица Users
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.UniversalTestingContext.Questions">
+            <summary>
+            Таблица Questions
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.UniversalTestingContext.Answers">
+            <summary>
+            Таблица Answers
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.UniversalTestingContext.Tests">
+            <summary>
+            Таблица Tests
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.User">
+            <summary>
+            Класс пользователя
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.User.Role">
+            <summary>
+            Роль пользователя
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.User.Acting">
+            <summary>
+            Активность пользователя
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.User.Tests">
+            <summary>
+            Список тестов
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Models.UserAuthentication">
+            <summary>
+            Класс аутенфикации пользователя
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.UserAuthentication.Login">
+            <summary>
+            Логин пользователя
+            </summary>
+        </member>
+        <member name="P:UniversalTestingService.Models.UserAuthentication.Password">
+            <summary>
+            Пароль пользователя
+            </summary>
+        </member>
+        <member name="T:UniversalTestingService.Services.QuestionService">
+            <summary>
+            Класс сервиса вопроса
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Services.QuestionService.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.#ctor(UniversalTestingService.Models.UniversalTestingContext)">
+            <summary>
+            Конструктор объекта сервиса вопроса
+            </summary>
+            <param name="context">Объект контекста базы данных</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.GetAllQuestions">
+            <summary>
+            Возвращение списка всех вопросов
+            </summary>
+            <returns>Список вопросов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.GetQuestion(System.Int32)">
+            <summary>
+            Возвращение вопроса
+            </summary>
+            <param name="id">Номер вопроса</param>
+            <returns>Вопрос</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.GetQuestionsByFilter(UniversalTestingService.Models.FilterQuestions)">
+            <summary>
+            Возвращение списка вопросов по фильтру
+            </summary>
+            <param name="filter">Объект фильтра вопросов</param>
+            <returns>Список вопросов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.CreateQuestion(UniversalTestingService.Models.Question)">
+            <summary>
+            Создание вопроса
+            </summary>
+            <param name="question">Объект вопроса</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.ConstainsQuestion(System.Int32)">
+            <summary>
+            Проверка наличия вопроса
+            </summary>
+            <param name="id">Номер вопроса</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.EditQuestion(System.Int32,UniversalTestingService.Models.Question)">
+            <summary>
+            Редактирование вопроса
+            </summary>
+            <param name="id">Номер вопроса</param>
+            <param name="question">Вопрос</param>
+            <returns>Результат редактирования</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.QuestionService.EditActingQuestion(UniversalTestingService.Models.Question,System.Boolean)">
+            <summary>
+            Редактирование активности вопроса 
+            </summary>
+            <param name="question">Вопрос</param>
+            <param name="acting">Активность вопроса</param>
+        </member>
+        <member name="T:UniversalTestingService.Services.TestService">
+            <summary>
+            Класс сервиса теста
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Services.TestService.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.#ctor(UniversalTestingService.Models.UniversalTestingContext)">
+            <summary>
+            Конструктор объекта сервиса вопроса
+            </summary>
+            <param name="context">Объект контекста базы данных</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.GetAllTests">
+            <summary>
+            Возвращение списка всех тестов
+            </summary>
+            <returns>Список тестов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.GetTest(System.Int32)">
+            <summary>
+            Возвращение теста
+            </summary>
+            <param name="id">Номер теста</param>
+            <returns>Тест</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.CreateTest(System.Security.Principal.IPrincipal,UniversalTestingService.Models.SubjectEnum,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Создание теста
+            </summary>
+            <param name="principal">Объект аутенфицированого пользователя</param>
+            <param name="subject">Предмет</param>
+            <param name="easyCount">Количество легких вопросов</param>
+            <param name="mediumCount">Количество вопросов средней сложности</param>
+            <param name="hardCount">Количество сложных вопросов</param>
+            <returns>Номер созданого теста</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.GetAnswersTest(UniversalTestingService.Models.Test)">
+            <summary>
+            Возвращение списка вопросов-ответов
+            </summary>
+            <param name="test">Тест</param>
+            <returns>Список вопросов-ответов</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.GetQuestions(UniversalTestingService.Models.SubjectEnum,UniversalTestingService.Models.LevelDifficultyEnum,System.Int32)">
+            <summary>
+            Возвращение списка случайных номеров вопросов
+            </summary>
+            <param name="subject">Предмет</param>
+            <param name="levelDifficulty">Уровень сложности</param>
+            <param name="count">Количество вопросов</param>
+            <returns></returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.CalculationResultTest(UniversalTestingService.Models.Test,System.Collections.Generic.List{UniversalTestingService.Models.Answer})">
+            <summary>
+            Расчет результата для не рассчитанного теста вызывающего пользователя
+            </summary>
+            <param name="test">Тест</param>
+            <param name="answers">Список ответов пользователя</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.GetUserTest(System.Int32,System.Security.Principal.IPrincipal)">
+            <summary>
+            Возвращение теста вызывающего пользователя
+            </summary>
+            <param name="id">Номер теста</param>
+            <param name="principal">Объект аутенфицированого пользователя</param>
+            <returns>Тест</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.TestService.CalculateMaxResult(UniversalTestingService.Models.Test)">
+            <summary>
+            Расчет и установка максимального результата теста
+            </summary>
+            <param name="test">Тест</param>
+        </member>
+        <member name="T:UniversalTestingService.Services.UserService">
+            <summary>
+            Класс сервиса пользователя
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Services.UserService.Context">
+            <summary>
+            Объект контекста базы данных
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Services.UserService.AdminRole">
+            <summary>
+            Роль администратора
+            </summary>
+        </member>
+        <member name="F:UniversalTestingService.Services.UserService.UserRole">
+            <summary>
+            Роль пользователя
+            </summary>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.#ctor(UniversalTestingService.Models.UniversalTestingContext)">
+            <summary>
+            Конструктор объекта сервиса пользователя
+            </summary>
+            <param name="context">Объект контекста базы данных</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.GetAllUsers">
+            <summary>
+            Возвращение списка всех пользователей
+            </summary>
+            <returns>Список пользователей</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.GetUser(System.String)">
+            <summary>
+            Возвращение пользователя
+            </summary>
+            <param name="login">Логин</param>
+            <returns>Пользователь</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.GetRoleUser(System.Security.Principal.IPrincipal)">
+            <summary>
+            Возвращение роли пользователя
+            </summary>
+            <param name="principal">Объект аутенфицированого пользователя</param>
+            <returns>Роль пользователя</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.CreateUser(UniversalTestingService.Models.UserAuthentication)">
+            <summary>
+            Создание пользователя
+            </summary>
+            <param name="userAuth">Объект аутенфикации пользователя</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.ConstainsUser(UniversalTestingService.Models.UserAuthentication)">
+            <summary>
+            Проверка наличия пользователя
+            </summary>
+            <param name="user">Пользователь</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.EditUser(UniversalTestingService.Models.User,System.Boolean,System.Boolean)">
+            <summary>
+            Редактирование пользователя
+            </summary>
+            <param name="user">Пользователь</param>
+            <param name="adminEnabled">Включение роли администратора</param>
+            <param name="actingEnabled">Включение активности</param>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.CheckLogin(System.String)">
+            <summary>
+            Проверка логина
+            </summary>
+            <param name="login">Логин</param>
+            <returns>Результат проверки</returns>
+        </member>
+        <member name="M:UniversalTestingService.Services.UserService.CheckPassword(System.String)">
+            <summary>
+            Проверка пароля
+            </summary>
+            <param name="password">Пароль</param>
+            <returns>Результат проверки</returns>
+        </member>
+    </members>
+</doc>
